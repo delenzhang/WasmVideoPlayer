@@ -195,7 +195,6 @@ Player.prototype.play = function (url, canvas, callback, waitHeaderLength, isStr
         this.isStream = isStream;
         this.startTrackTimer();
         this.displayLoop();
-
         //var playCanvasContext = playCanvas.getContext("2d"); //If get 2d, webgl will be disabled.
         this.webglPlayer = new WebGLPlayer(this.canvas, {
             preserveDrawingBuffer: false
@@ -215,7 +214,6 @@ Player.prototype.play = function (url, canvas, callback, waitHeaderLength, isStr
                 st: 200
             });
         }
-
         var self = this;
         this.registerVisibilityEvent(function(visible) {
             if (visible) {
@@ -640,6 +638,8 @@ Player.prototype.onVideoParam = function (v) {
     //this.canvas.height = v.h;
     this.videoWidth = v.w;
     this.videoHeight = v.h;
+    this.canvas.width = v.w;
+    this.canvas.height = v.h
     this.yLength = this.videoWidth * this.videoHeight;
     this.uvLength = (this.videoWidth / 2) * (this.videoHeight / 2);
 

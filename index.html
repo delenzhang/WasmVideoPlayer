@@ -12,19 +12,6 @@
 
 <body>
     <div class="container" id="videoPlayer">
-        <div class="sideBar">
-            <span class="no-padding">
-                <img src="img/home.png" class="left" id="btnHome" title="Visit My Homepage" onclick="window.open('https://blog.csdn.net/sonysuqin')" />
-            </span>
-            <div id="input">
-                <select id="protocol" onchange="onSelectProto()">
-                    <option value="http">HTTP</option>
-                    <option value="ws">WS</option>
-                    <option value="httpFlv">HTTP-FLV</option>
-                </select>
-                <input type="text" id="inputUrl" style="width:300px"/>
-            </div>
-        </div>
         <div class="canvasDiv">
             <div class="loadEffect" id="loading" style="display:none;">
                 <span></span>
@@ -82,8 +69,8 @@
                 stream: true,
             }
         };
-        let inputUrl = document.getElementById("inputUrl");
-        inputUrl.value = defaultProtos["http"]["url"];
+        // let inputUrl = document.getElementById("inputUrl");
+        // inputUrl.value = defaultProtos["http"]["url"];
 
         //Player object.
         self.player = new Player();
@@ -96,10 +83,9 @@
 
         function playVideo() {
             var protoList = document.getElementById("protocol");
-            var proto = protoList.options[protoList.selectedIndex].value;
+            var proto = "httpFlv" // protoList.options[protoList.selectedIndex].value;
             var protoObj = defaultProtos[proto];
-            var inputUrl = document.getElementById("inputUrl");
-            var url = inputUrl.value;
+            var url = "https://tx100.liveplay.live.kugou.com/live/fx_hifi_379417691.flv?cn=fx&ua=fx-flash&fx-ps=5-0-1651923361489&txSecret=9821843c5a39e600ab2253b4610e2e5c&txTime=62770261";
 
             var el = document.getElementById("btnPlayVideo");
             var currentState = self.player.getState();
@@ -150,7 +136,7 @@
             var proto = protoList.options[protoList.selectedIndex].value;
             var protoObj = defaultProtos[proto];
             var inputUrl = document.getElementById("inputUrl");
-            inputUrl.value = protoObj["url"];
+            inputUrl.value = "https://tx100.liveplay.live.kugou.com/live/fx_hifi_379417691.flv?cn=fx&ua=fx-flash&fx-ps=5-0-1651923361489&txSecret=9821843c5a39e600ab2253b4610e2e5c&txTime=62770261";
         }
     </script>
 </body>

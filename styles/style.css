@@ -1,7 +1,7 @@
 .sideBar {
     width: 852px;
     height: 28px;
-    outline: 2px solid rgba(0, 0, 0, 0.9);
+    /* outline: 2px solid rgba(0, 0, 0, 0.9); */
     background-color: rgba(243, 244, 246, 0.9);
 }
 
@@ -25,10 +25,10 @@
     width: 852px;
     height: 536px;
     background-color: white;
-    border: 2px solid rgba(0, 0, 0, 0.9);
+    /* border: 2px solid rgba(0, 0, 0, 0.9); */
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%,-50%);
     z-index: 10;
 }
@@ -124,13 +124,13 @@
 }
 
 .canvasDiv {
-    width: 852px;
-    height: 480px
+    
 }
 
 #playCanvas {
-    width: 852px;
-    height: 480px;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .no-padding {
