@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <sys/time.h>
+// #include <stdio.h>
+// #include <sys/time.h>
 #include <sys/timeb.h>
-#include <unistd.h>
+// #include <unistd.h>
 
 typedef void(*VideoCallback)(unsigned char *buff, int size, double timestamp);
 typedef void(*AudioCallback)(unsigned char *buff, int size, double timestamp);
@@ -984,10 +984,10 @@ ErrorCode seekTo(int ms, int accurateSeek) {
     }
 }
 
-int main() {
-    //simpleLog("Native loaded.");
-    return 0;
-}
+// int main() {
+//     //simpleLog("Native loaded.");
+//     return 0;
+// }
 
 #ifdef __cplusplus
 }

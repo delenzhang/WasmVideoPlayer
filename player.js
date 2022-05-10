@@ -107,6 +107,7 @@ Player.prototype.initDecodeWorker = function () {
                 self.onVideoFrame(objData);
                 break;
             case kAudioFrame:
+                console.log(objData)
                 self.onAudioFrame(objData);
                 break;
             case kDecodeFinishedEvt:
